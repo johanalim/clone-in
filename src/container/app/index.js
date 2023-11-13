@@ -1,12 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
-
-const Home = React.lazy(() => import("./container/pages/Home"));
-const About = React.lazy(() => import("./container/pages/About"));
+import { Home , About , Navbar} from "../pages";
 
 const App = () => {
   return (
     <Router>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
